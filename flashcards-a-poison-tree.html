@@ -12,29 +12,48 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
     }
 
     .card-container {
       perspective: 1000px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
 
     .card {
-      width: 500px;
-      min-height: 250px;
-      padding: 20px;
+      width: 620px;
+      max-width: 90%;
+      min-height: 300px;
+      padding: 30px;
       background: white;
-      border-radius: 12px;
+      border-radius: 14px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
+
       cursor: pointer;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       transition: transform 0.6s;
       transform-style: preserve-3d;
       position: relative;
-      word-wrap: break-word;
+
+      line-height: 1.7;
+      letter-spacing: 0.6px;
+
+      white-space: pre-wrap;
+      word-break: break-word;
+      text-align: center;
     }
 
     .card.flip {
@@ -52,11 +71,11 @@
     }
 
     .next-btn {
-      margin-top: 20px;
-      padding: 12px 30px;
+      margin-top: 25px;
+      padding: 14px 35px;
       background-color: #cfe8ff;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 14px;
       text-transform: uppercase;
       cursor: pointer;
@@ -65,10 +84,20 @@
     .next-btn:hover {
       background-color: #b7dcff;
     }
+
+    .back-btn {
+      margin-top: 15px;
+      text-decoration: none;
+      color: gray;
+      font-size: 13px;
+    }
+
   </style>
 </head>
 
 <body>
+
+  <h1>Poison Tree Flashcards</h1>
 
   <div class="card-container">
     <div class="card" onclick="flipCard()">
@@ -79,35 +108,63 @@
 
   <button class="next-btn" onclick="nextCard()">Next</button>
 
+  <a class="back-btn" href="flashcards-menu.html">← Back</a>
+
   <script>
     const flashcards = [
+
       {
-        question: "“In the morning glad I see; My foe outstretched beneath the tree.”",
-        answer: "“glad” builds up tension and give the poem a sinister climax, speaker looks pleased that their foe collapsed.Contrast: “glad” is a positive word here, but the situation is grim. Demonstrates the corrupting effect of suppressed anger.Moral message: An uncertain ending let reader think what will happen. Anger may bring short-term satisfaction, but it is poisonous."
+        question: "Four themes in Poison Tree",
+        answer: "• Conflict in society\n• Effect of conflict\n• Nature\n• Anger"
       },
+
       {
-        question: "Explain covalent bonding in detail. Why do atoms share electrons instead of transferring them?",
-        answer: "Covalent bonding occurs when atoms share electrons to achieve a full outer shell. This usually happens between non-metals where electronegativity differences are small."
+        question: "Conflict in Society",
+        answer: "• Between individuals\n• Readers cannot find what the conflict is → UNIVERSAL\n• Can be applied to anyone"
       },
+
       {
-        question: "Long question example: Explain why increasing temperature increases reaction rate, including collision theory and energy distribution.",
-        answer: "Higher temperature means particles move faster, leading to more frequent and more energetic collisions. A greater proportion of particles exceed activation energy."
+        question: "Nature",
+        answer: "• Metaphor\n• Apple of sin in the Bible\n• Contrast to positive themes usually linked to nature"
+      },
+
+      {
+        question: "Anger",
+        answer: "• Unchecked → harmful\n• Dealt with → resolved\n• Symbolised by natural elements\n• Anger is a natural emotion"
+      },
+
+      {
+        question: "“I was angry with my friend;\nI told my wrath, my wrath did end.\nI was angry with my foe:\nI told it not, my wrath did grow.”",
+        answer: "• Anaphora: repetition of “I was angry” emphasises anger as key theme\n• Contrast: shows different outcomes depending on how anger is handled"
+      },
+
+      {
+        question: "Effect of conflict",
+        answer: "• Communication → resolution\n• Suggests society should express negative emotions\n• Otherwise emotions become toxic"
+      },
+
+      {
+        question: "“And it grew both day and night.\nTill it bore an apple bright.”",
+        answer: "• Contrast: active “it grew” vs passive “I water’d” → loss of control\n• Growth shows anger developing continuously\n• Apple symbolises conflict + forbidden fruit (Genesis)"
+      },
+
+      {
+        question: "“In the morning glad I see;\nMy foe outstretched beneath the tree.”",
+        answer: "• “Glad” creates a sinister tone\n• Contrast: positive word in a dark situation\n• Shows corruption caused by suppressed anger\n• Moral: anger may feel satisfying but is ultimately destructive"
       }
+
     ];
 
     let currentIndex = 0;
-    let flipped = false;
 
     function updateCard() {
       document.getElementById("question").innerText = flashcards[currentIndex].question;
       document.getElementById("answer").innerText = flashcards[currentIndex].answer;
       document.querySelector(".card").classList.remove("flip");
-      flipped = false;
     }
 
     function flipCard() {
       document.querySelector(".card").classList.toggle("flip");
-      flipped = !flipped;
     }
 
     function nextCard() {
