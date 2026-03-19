@@ -21,6 +21,7 @@ const cardInner = document.getElementById("card-inner");
 const cardFront = document.getElementById("card-front");
 const cardBack = document.getElementById("card-back");
 
+// 显示当前卡片
 function showCard(index) {
   cardFront.textContent = flashcards[index].question;
   cardBack.textContent = flashcards[index].answer;
@@ -30,8 +31,8 @@ function showCard(index) {
 // 初始化显示第一张
 showCard(currentIndex);
 
-// 翻转按钮
-document.getElementById("flip").addEventListener("click", () => {
+// 点击卡片翻转
+cardInner.addEventListener("click", () => {
   cardInner.classList.toggle("flipped");
 });
 
