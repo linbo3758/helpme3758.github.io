@@ -8,7 +8,7 @@ This is a GCSE revision website.
 - Mathematics
 - Further Mathematics
 - English Literature
-<a href="flashcards/flashcards.html">Go to Flashcards</a>
+<a href="flashcards.html">Flashcards</a>
 - English Language
 - Geography
 - History
