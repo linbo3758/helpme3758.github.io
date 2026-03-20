@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flashcards</title>
+
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    .card-container {
+      perspective: 1000px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 620px;
+      max-width: 90%;
+      min-height: 300px;
+      padding: 30px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+
+      line-height: 1.7;
+      letter-spacing: 0.6px;
+
+      white-space: pre-wrap;
+      word-break: break-word;
+      text-align: center;
+    }
+
+    .card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      backface-visibility: hidden;
+      width: 100%;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    .next-btn {
+      margin-top: 25px;
+      padding: 14px 35px;
+      background-color: #cfe8ff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background-color: #b7dcff;
+    }
+
+    .back-btn {
+      margin-top: 15px;
+      text-decoration: none;
+      color: gray;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Poison Tree Flashcards</h1>
+
+  <div class="card-container">
+    <div class="card" onclick="flipCard()">
+      <div class="card-face front" id="question"></div>
+      <div class="card-face back" id="answer"></div>
+    </div>
+  </div>
+
+  <button class="next-btn" onclick="nextCard()">Next</button>
+
+  <a class="back-btn" href="/helpme3758/">← Back to Home</a>
+
+  <script>
+    const flashcards = [
+
+      {
+  question: "Conflict in Society",
+  answer: "• Although the poem focused on the speaker's personal conflict with Cousin Kate, Rossetti uses this private story to expose a wider social conflict – the inequality between men and women.<br>• And the conflict of women against social restrictions on reputation."
+},
+      
+{
+  question: "To lead a shameless shameful life",
+  answer: "• Oxymoron reflects her inner turmoil and self-destruction, she internalised society judgement so deeply that she begins to describe herself in the same cruel terms.<br>• Alliteration: repetition of SH. Adds harsh and biting tone, echoing speaker's anger and bitterness.<br>• SH also creates a shushing sound, suggests it is an inglorious thing."
+},
+      
+{
+  question: "He bound you with his ring",
+  answer: "• Symbolism: they are getting married, bond together and putting on the ring.<br>• BOUND: implies restriction and constriction. Marriage is another form of control.<br>• Cousin Kate gains social respectability through marriage (wing – rise class), but also lost freedom (wing – freedom-contrast)."
+},
+      
+{
+  question: "He saw you… He watched you… He lifted you…",
+  answer: "• Anaphora: the repetition of HE makes the lord seem predatory. HE is dominating their life.<br>• Passive verb: Highlighting their lack of control over their own fates."
+},
+      
+{
+  question: "Anger",
+  answer: "• The speaker shows anger to Cousin Kate and the Lord who betrayed her.<br>• Anger is expressed through bitter tone, repetition and direct address of Kate.<br>• Rossetti channels anger at Victorian gender inequality.<br>• Speaker's anger also from the harsh social stigma and consequences forced upon her by society. Punishment for her not him."
+},
+      
+{
+  question: "My fair-haired son, my shame, my pride",
+  answer: "• Oxymoron: Although society calls her a disgrace, but it is her source of love and proud.<br>• Suggest the conflict between her and society.<br>• She transferred her anger to empowerment, she rejected judgemental society, instead focused on what she values most."
+},
+      
+{
+  question: "His plaything… He wore me… He changed me… So now I moan…",
+  answer: "• Golden knot: She tries to compare herself with luxurious object, she still measures herself by the Lord's attention and approval.<br>• Glove: Metaphors her body. The lord treated her like a disposable object, highlighting the lord's lack of love or respect and symbolising men's broader power over women in Victorian society.<br>• Unclean thing and dove: she is considered unclean because she is no longer a virgin. Contrast with the dove, which is a symbol of innocence. Emphasize the effect and stigma that loss of purity brought to women."
+},
+      
+{
+  question: "I sit and howl in dust, You sit in gold and sing",
+  answer: "• Sensory language – contrast.<br>• Speaker used animal-liked language to emphasize the power and status imbalance in their relationship.<br>• Humiliated – by the stigma.<br>• Kate is likened to a caged songbird, a beautiful creature that is exploited and controlled."
+}
+    ];
+
+    let currentIndex = 0;
+
+    function updateCard() {
+      document.getElementById("question").innerText = flashcards[currentIndex].question;
+      document.getElementById("answer").innerText = flashcards[currentIndex].answer;
+      document.querySelector(".card").classList.remove("flip");
+    }
+
+    function flipCard() {
+      document.querySelector(".card").classList.toggle("flip");
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % flashcards.length;
+      updateCard();
+    }
+
+    updateCard();
+  </script>
+
+</body>
+</html>
