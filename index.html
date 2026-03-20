@@ -68,21 +68,21 @@
       justify-content: center;
     }
 
-    /* 按钮始终位于卡片底部 */
-    .button {
-      width: 100%;          /* 和卡片宽度一样 */
-      height: calc(150px / 8); /* 高度 = 卡片高度1/8 */
-      max-height: 30px;     /* 防止太高 */
-      border-radius: 8px;
-      background: #A4D65E;
-      font-size: 14px;
-      font-weight: bold;
-      text-align: center;
-      line-height: calc(150px / 8); /* 居中文本 */
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
+ .button {
+  width: 100%;
+  height: calc(150px / 5);  /* 高度 = 1/5 卡片高度 */
+  max-height: 35px;         /* 可以调整最大高度 */
+  border-radius: 8px;
+  background: #A4D65E;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: calc(150px / 5); /* 居中文本 */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+    
   </style>
 </head>
 
