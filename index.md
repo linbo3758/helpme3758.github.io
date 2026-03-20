@@ -8,7 +8,7 @@ This is a GCSE revision website.
 - Mathematics
 - Further Mathematics
   
-- <a href="PA/PoertyAnthology-menu.html">Poerty Anthology</a>
+- <a href="PA/PoetryAnthology-menu.html">Poetry Anthology</a>
 
 - English Language
 - Geography
