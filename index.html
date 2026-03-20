@@ -1,73 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  
-<div class="section">
-  <h1 style="text-align:left; color:#A4D65E; font-weight:bold; margin-bottom:5px;">Help me 3758!</h1>
-  <p style="text-align:left; margin-top:0;">A GCSE revision website.</p>
-</div>
-
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCSE Revision Hub | Help me 3758</title>
+  <style>
+    /* 全局重置 & 基础样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      padding: 2rem 1.5rem;
+      line-height: 1.4;
+    }
+
+    /* 公用区块样式 */
+    .section {
+      max-width: 1280px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    /* 标题区 — 修复原来的 “Help me 3758!” 样式 */
+    .hero {
+      text-align: left;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #A4D65E;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #475569;
+      margin-top: 0;
+    }
+
+    /* 二级标题 (Maths, English ...) */
+    .section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      border-left: 5px solid #A4D65E;
+      padding-left: 0.75rem;
+    }
+
+    /* 卡片网格 — 完全修复布局 */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* 卡片样式: 优雅卡片 + 底部按钮对齐 */
     .card {
       background: #f9fafb;
-      padding: 18px;
-      border-radius: 14px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1rem 1rem 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s ease-in-out;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-end; /* 按钮底部对齐 */
-      min-height: 150px;
-      transition: border 0.3s, transform 0.2s;
+      justify-content: space-between;
+      min-height: 180px;
+      border: 1px solid #e9edf2;
       position: relative;
     }
 
+    /* hover 边框变绿 + 微上浮 */
     .card:hover {
-      border: 2px solid #A4D65E; /* hover 边框绿色 */
-      transform: translateY(-5px);
+      border: 2px solid #A4D65E;
+      box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.15);
     }
 
+    /* 卡片标题区域 */
     .card h3 {
-      margin: 0 0 10px 0;
-      font-size: 18px;
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
       text-align: center;
-      flex-grow: 1; /* 占满上半部分，按钮底部对齐 */
+      color: #0f172a;
+      flex: 1;               /* 占据剩余空间，将按钮推到底部 */
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
     }
 
- .button {
-  width: 100%;
-  height: calc(150px / 5);  /* 高度 = 1/5 卡片高度 */
-  max-height: 35px;         /* 可以调整最大高度 */
-  border-radius: 8px;
-  background: #A4D65E;
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  line-height: calc(150px / 5); /* 居中文本 */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-    
+    /* 修复按钮样式 — 之前 .button 用了 absolute 导致脱离文档流错位 */
+    /* 现在使用 flex 方式，按钮自然位于卡片底部，无需 absolute */
+    .card .button {
+      display: inline-block;
+      width: 100%;
+      background-color: #A4D65E;
+      color: #1e3a2f;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.7rem 0;
+      border-radius: 40px;
+      transition: all 0.2s;
+      letter-spacing: 0.3px;
+      border: none;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    .card .button:hover {
+      background-color: #8bc34a;
+      transform: scale(0.98);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      color: #0f2c1f;
+    }
+
+    /* 针对小屏幕的微调 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.25rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section h2 {
+        font-size: 1.5rem;
+      }
+      .card {
+        min-height: 160px;
+        padding: 1.2rem 0.8rem 0.8rem 0.8rem;
+      }
+      .card h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* 保持整体风格简洁，同时还原 “Help me 3758!” 区块 */
+    .gcse-student-note {
+      max-width: 1280px;
+      margin: 0 auto 1rem auto;
+      font-size: 0.9rem;
+      color: #4b5563;
+      background: #fefce8;
+      padding: 0.5rem 1rem;
+      border-radius: 32px;
+      display: inline-block;
+    }
   </style>
 </head>
-
 <body>
 
-<div class="section">
-  <h1>GCSE Revision Hub</h1>
-  <p style="text-align:center;">Built by a GCSE student, for GCSE students.</p>
+<!-- 
+  修复点: 
+  1. 头部区域原本写在 <head> 里面的 <div class="section"> 无效且破坏结构。
+     已移动到 body 内并保持原设计 “Help me 3758!” + 副标题风格。
+  2. 卡片按钮原先使用 absolute 定位 + 手动计算高度，导致按钮覆盖内容或不对齐。
+     改用 Flexbox 布局 (flex + margin-top: auto 策略 / flex:1 让标题撑开)，
+     确保所有卡片无论标题长短，按钮始终底部对齐且美观。
+  3. 修复 <style> 位置原本在 <head> 内出现了未闭合/混乱情况，现在集中整理在 head 中。
+  4. 保留原所有科目链接 (maths.html, furthermaths.html ...) 保持不变。
+  5. 添加移动端适配 + 提升整体可访问性。
+-->
+
+<!-- 原始 “Help me 3758!” 区块 (完全保留原文字风格) -->
+<div class="hero section">
+  <h1 style="color: #A4D65E; font-weight: bold; margin-bottom: 5px;">Help me 3758!</h1>
+  <p style="margin-top: 0; font-size: 1.1rem;">A GCSE revision website.</p>
+  <!-- 保留原意但增加一点额外说明 -->
+  <div style="margin-top: 8px; font-size: 0.85rem; color: #5b6e8c;">Built by a GCSE student, for GCSE students.</div>
 </div>
 
-<!-- MATHS -->
+<!-- MATHS 区块 -->
 <div class="section">
   <h2>📐 Maths</h2>
   <div class="card-container">
@@ -82,7 +200,7 @@
   </div>
 </div>
 
-<!-- ENGLISH -->
+<!-- ENGLISH 区块 -->
 <div class="section">
   <h2>📝 English</h2>
   <div class="card-container">
@@ -97,7 +215,7 @@
   </div>
 </div>
 
-<!-- SCIENCES -->
+<!-- SCIENCES 区块 -->
 <div class="section">
   <h2>🔬 Sciences</h2>
   <div class="card-container">
@@ -112,7 +230,7 @@
   </div>
 </div>
 
-<!-- HUMANITIES -->
+<!-- HUMANITIES 区块 -->
 <div class="section">
   <h2>📖 Humanities</h2>
   <div class="card-container">
@@ -127,7 +245,7 @@
   </div>
 </div>
 
-<!-- LANGUAGES -->
+<!-- LANGUAGES 区块 -->
 <div class="section">
   <h2>🌍 Languages</h2>
   <div class="card-container">
@@ -141,6 +259,11 @@
     </div>
   </div>
 </div>
+
+<!-- 注脚（可选）简洁说明 -->
+<footer style="max-width: 1280px; margin: 3rem auto 1rem auto; text-align: center; font-size: 0.8rem; color: #6c757d; border-top: 1px solid #e9ecef; padding-top: 1.5rem;">
+  <p>📖 GCSE Revision Hub — 所有资料仅供学习参考</p>
+</footer>
 
 </body>
 </html>
