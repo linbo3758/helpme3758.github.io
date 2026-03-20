@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flashcards</title>
+
+  <style>
+    body {
+      font-family: Verdana, sans-serif;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+    }
+
+    .card-container {
+      perspective: 1000px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card {
+      width: 620px;
+      max-width: 90%;
+      min-height: 300px;
+      padding: 30px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+
+      line-height: 1.7;
+      letter-spacing: 0.6px;
+
+      white-space: pre-wrap;
+      word-break: break-word;
+      text-align: center;
+    }
+
+    .card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      backface-visibility: hidden;
+      width: 100%;
+    }
+
+    .back {
+      transform: rotateY(180deg);
+    }
+
+    .next-btn {
+      margin-top: 25px;
+      padding: 14px 35px;
+      background-color: #cfe8ff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .next-btn:hover {
+      background-color: #b7dcff;
+    }
+
+    .back-btn {
+      margin-top: 15px;
+      text-decoration: none;
+      color: gray;
+      font-size: 13px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Poison Tree Flashcards</h1>
+
+  <div class="card-container">
+    <div class="card" onclick="flipCard()">
+      <div class="card-face front" id="question"></div>
+      <div class="card-face back" id="answer"></div>
+    </div>
+  </div>
+
+  <button class="next-btn" onclick="nextCard()">Next</button>
+
+  <a class="back-btn" href="/helpme3758/">← Back to Home</a>
+
+  <script>
+    const flashcards = [
+
+{
+  question: "Identity",
+  answer: "• The mixture of Caribbean dialect and standard English, suggest the speaker is mixed heritage.\n• By exaggerated metaphor like 'half of mih eye', the speaker shows the ABSURDITY of 'half-caste'. And suggest they don't identify with the term and find it offensive.\n• By examples of how mixing creates beauty (Picasso), shows their pride in having a mixed background."
+},
+      
+{
+  question: "Contrast",
+  answer: "• The juxtapose of serious argument and humorous imagery.\n• These contrasts emphasize how wrong and ridiculous the term 'half-caste' is."
+},
+      
+{
+  question: "Confrontational language",
+  answer: "• Conversational – let the readers engage and think about the problem.\n• By making the reader uncomfortable therefore pushing them to reflect on their own assumption."
+},
+      
+{
+  question: "Structure",
+  answer: "• The first half of the poem contains a series of metaphors that compare being mixed race to great art and natural weather.\n• In the second half, the speaker uses exaggeration (half a person) to expose the ridiculousness of the term half-caste.\n• The final lines invite the reader to open their mind and reconsider racism in society."
+},
+      
+{
+  question: "Anger",
+  answer: "• Speaker is angry that people use 'half-caste' this word to describe mixed-race people.\n• He channels into the theme by explain why this term is offensive.\n• Confrontational languages and repeated imperatives, emphasize speaker's anger."
+},
+      
+{
+  question: "Dialect",
+  answer: "• By using Caribbean dialect words and standard English.\n• CREOLE language.\n• Agard shows how mixing make powerful poetry."
+},
+      
+{
+  question: "Form",
+  answer: "• No rhyme and form\n• Rebellion of linguistic and social expectations and regulations.\n• The use of enjambment and lack of punctuation gives the poem a sense of urgency."
+}
+
+    ];
+
+    let currentIndex = 0;
+
+    function updateCard() {
+      document.getElementById("question").innerText = flashcards[currentIndex].question;
+      document.getElementById("answer").innerText = flashcards[currentIndex].answer;
+      document.querySelector(".card").classList.remove("flip");
+    }
+
+    function flipCard() {
+      document.querySelector(".card").classList.toggle("flip");
+    }
+
+    function nextCard() {
+      currentIndex = (currentIndex + 1) % flashcards.length;
+      updateCard();
+    }
+
+    updateCard();
+  </script>
+
+</body>
+</html>
