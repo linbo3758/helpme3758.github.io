@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Help me 3758!</title>
+  <title>GCSE Revision Hub</title>
 
   <style>
     body {
@@ -25,6 +25,8 @@
 
     h1 {
       font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     h2 {
@@ -42,42 +44,44 @@
       padding: 18px;
       border-radius: 14px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end; /* 按钮底部对齐 */
       min-height: 150px;
+      transition: border 0.3s, transform 0.2s;
+      position: relative;
     }
 
     .card:hover {
+      border: 2px solid #A4D65E; /* hover 边框绿色 */
       transform: translateY(-5px);
     }
 
-    /* 科目名字 */
     .card h3 {
-      margin: 0;
+      margin: 0 0 10px 0;
       font-size: 18px;
       text-align: center;
+      flex-grow: 1; /* 占满上半部分，按钮底部对齐 */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Open按钮 */
+    /* 按钮始终位于卡片底部 */
     .button {
-      margin-top: 10px;
-      padding: 6px 0;
-      width: 40%; /* 初始按钮宽度 */
+      width: 100%;          /* 和卡片宽度一样 */
+      height: calc(150px / 8); /* 高度 = 卡片高度1/8 */
+      max-height: 30px;     /* 防止太高 */
       border-radius: 8px;
       background: #A4D65E;
       font-size: 14px;
       font-weight: bold;
-      transition: all 0.2s;
       text-align: center;
-    }
-
-    /* hover时变成长条，长度 = card宽度，高度约1/5~1/6 */
-    .card:hover .button {
-      width: 100%;
-      padding: 25px 0; /* 根据卡片高度调节，约1/5-1/6 */
+      line-height: calc(150px / 8); /* 居中文本 */
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
   </style>
 </head>
@@ -86,7 +90,7 @@
 
 <div class="section">
   <h1>GCSE Revision Hub</h1>
-  <p>Built by a GCSE student, for GCSE students.</p>
+  <p style="text-align:center;">Built by a GCSE student, for GCSE students.</p>
 </div>
 
 <!-- MATHS -->
@@ -110,11 +114,11 @@
   <div class="card-container">
     <div class="card">
       <h3>English Literature</h3>
-      <a href="english-lit.html" class="button">Open</a>
+      <a href="english-literature.html" class="button">Open</a>
     </div>
     <div class="card">
       <h3>English Language</h3>
-      <a href="english-lang.html" class="button">Open</a>
+      <a href="english-language.html" class="button">Open</a>
     </div>
   </div>
 </div>
