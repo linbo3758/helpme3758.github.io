@@ -1,24 +1,112 @@
-<h2>Global Variation Mindmap</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geography | Help me 3758</title>
 
-<div class="iframe-container">
-  <iframe 
-    src="https://whimsical.com/embed/TrDmsEGQzT8guFvxRxZ4RF"
-    frameborder="0"
-    allowfullscreen>
-  </iframe>
-</div>
+  <style>
+    /* =========================
+       Reset & 基础
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.iframe-container {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9比例 */
-}
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      padding: 2rem 1.5rem;
+      line-height: 1.4;
+    }
 
-.iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
+    /* =========================
+       Section / Hero 标题
+    ========================= */
+    .section {
+      max-width: 1280px;
+      margin: 0 auto 2.5rem auto;
+    }
+
+    .hero {
+      text-align: left;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid #eef2f6;
+      padding-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #A4D65E;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #475569;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      border-left: 5px solid #A4D65E;
+      padding-left: 0.75rem;
+    }
+
+    /* =========================
+       Mindmap iframe 容器
+    ========================= */
+    .mindmap-section {
+      max-width: 1280px;
+      margin: 2rem auto;
+    }
+
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9比例 */
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid #e9edf2;
+    }
+
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="hero section">
+    <h1>Global Variation</h1>
+    <p>Changing Economic World</p>
+  </div>
+
+  <!-- MINDMAP -->
+  <div class="section mindmap-section">
+    <h2>Overview</h2>
+
+    <div class="iframe-container">
+      <iframe 
+        src="https://whimsical.com/embed/TrDmsEGQzT8guFvxRxZ4RF"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+</body>
+</html>
