@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GCSE Revision Hub | Help me 3758</title>
+  <title>Help me 3758 | GCSE Revision Hub</title>
   <style>
     /* 全局重置 & 基础样式 */
     * {
@@ -26,7 +26,6 @@
       margin: 0 auto 2.5rem auto;
     }
 
-    /* 标题区 — 修复原来的 “Help me 3758!” 样式 */
     .hero {
       text-align: left;
       margin-bottom: 2rem;
@@ -165,19 +164,7 @@
 </head>
 <body>
 
-<!-- 
-  修复点: 
-  1. 头部区域原本写在 <head> 里面的 <div class="section"> 无效且破坏结构。
-     已移动到 body 内并保持原设计 “Help me 3758!” + 副标题风格。
-  2. 卡片按钮原先使用 absolute 定位 + 手动计算高度，导致按钮覆盖内容或不对齐。
-     改用 Flexbox 布局 (flex + margin-top: auto 策略 / flex:1 让标题撑开)，
-     确保所有卡片无论标题长短，按钮始终底部对齐且美观。
-  3. 修复 <style> 位置原本在 <head> 内出现了未闭合/混乱情况，现在集中整理在 head 中。
-  4. 保留原所有科目链接 (maths.html, furthermaths.html ...) 保持不变。
-  5. 添加移动端适配 + 提升整体可访问性。
--->
 
-<!-- 原始 “Help me 3758!” 区块 (完全保留原文字风格) -->
 <div class="hero section">
   <h1 style="color: #A4D65E; font-weight: bold; margin-bottom: 5px;">Help me 3758!</h1>
   <p style="margin-top: 0; font-size: 1.1rem;">A GCSE revision website.</p>
