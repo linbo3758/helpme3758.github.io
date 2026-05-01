@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environment</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #1e293b;
+  padding: 2rem 1.5rem;
+}
+
+.section {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+h1 {
+  color: #A4D65E;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  border-left: 5px solid #A4D65E;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.audio-box {
+  background: #f1f5f9;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.question {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background: #A4D65E;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+button:hover {
+  background: #8bc34a;
+}
+
+.answer {
+  display: none;
+  font-size: 0.95rem;
+  color: #334155;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.usage {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+</style>
+
+<script>
+function toggleAnswer(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === "none" ? "block" : "none";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="section">
+  <h1>Spanish Speaking</h1>
+  <p>Unit: Medio Ambiente</p>
+</div>
+
+<div class="section">
+
+  <h2>Full Audio</h2>
+  <div class="audio-box">
+    <audio controls>
+      <source src="SP/audio/medio-ambiente.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question">
+    <h3>¿Qué problemas medioambientales hay en tu pueblo?</h3>
+    <div class="time">⏱ 0:00 – 0:20</div>
+    <button onclick="toggleAnswer('a1')">Show Answer</button>
+
+    <div id="a1" class="answer">
+      En mi barrio, hay varios problemas medioambientales, como la contaminación del aire y el exceso de basura en las calles, especialmente en el centro de la ciudad. Lo que más me preocupa es la contaminación del aire, porque si seguimos así, la calidad de vida y la flora y fauna sufrirán.
+    </div>
+
+  </div>
+
+  <!-- Q2 -->
+  <div class="question">
+    <h3>¿Qué haces en casa para ayudar al medioambiente?</h3>
+    <div class="time">⏱ 0:20 – 0:45</div>
+    <button onclick="toggleAnswer('a2')">Show Answer</button>
+
+    <div id="a2" class="answer">
+      El mes pasado decidí actuar: reciclé más plástico y cartón. Sugerí a mi familia que separara la basura antes de tirarla. 
+      Cuando era pequeña, reutilizaba las botellas de bebidas como floreros. 
+      En mi opinión, se puede proteger el medio ambiente reciclando más y reduciendo el uso de energía.
+    </div>
+
+  </div>
+
+  <!-- Q3 -->
+  <div class="question">
+    <h3>¿Qué vas a hacer en el futuro para proteger el medio ambiente?</h3>
+    <div class="time">⏱ 0:45 – 1:05</div>
+    <button onclick="toggleAnswer('a3')">Show Answer</button>
+
+    <div id="a3" class="answer">
+      El gobierno debería plantar más árboles, porque esto mejoraría la calidad del aire y reduciría el riesgo de inundaciones. 
+      En el futuro, seguiré reciclando y también intentaré usar menos plástico.
+    </div>
+
+  </div>
+
+  <!-- Q4 -->
+  <div class="question">
+    <h3>¿Cuál es tu opinión sobre tu casa y tu ciudad?</h3>
+    <div class="time">⏱ 1:05 – 1:30</div>
+    <button onclick="toggleAnswer('a4')">Show Answer</button>
+
+    <div id="a4" class="answer">
+      En mi opinión, mi casa es bastante cómoda y moderna, lo cual me permite relajarme después de un día largo. 
+      Vivo en una ciudad bastante animada, donde hay muchas cosas que hacer. Sin embargo, en el centro de la ciudad, puede ser ruidosa y concurrida. 
+      Normalmente, paso tiempo con mis amigos en el centro de la ciudad. Vamos de compras, vemos películas o simplemente paseamos.
+    </div>
+
+  </div>
+
+  <!-- Q5 -->
+  <div class="question">
+    <h3>¿Cuáles son las ventajas de vivir en la ciudad o en qué país te gustaría vivir?</h3>
+    <div class="time">⏱ 1:30 – 1:50</div>
+    <button onclick="toggleAnswer('a5')">Show Answer</button>
+
+    <div id="a5" class="answer">
+      Creo que vivir en la ciudad tiene muchas ventajas, ya que hay más oportunidades, mejores instalaciones y transporte público más eficiente. 
+      En el futuro, me gustaría vivir en España porque tiene buen clima, una cultura interesante y un estilo de vida relajado. Además, vivir allí me ayudaría a mejorar mi español.
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
