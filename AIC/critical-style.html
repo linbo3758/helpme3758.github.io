@@ -50,7 +50,7 @@
       font-weight: 700;
     }
 
-    /* Subheadings for internal structure */
+    /* Subheadings for internal structure — these CAN be bold */
     h3 {
       font-size: 1.2rem;
       margin: 1.2rem 0 0.6rem 0;
@@ -59,7 +59,7 @@
       padding-left: 0.2rem;
     }
 
-    /* plain lists — no cards, just clean typography */
+    /* plain lists — no cards, just clean typography, no bold inside */
     .sentence-list {
       list-style: none;
       margin: 0.5rem 0 1rem 1rem;
@@ -72,23 +72,19 @@
       color: #1e293b;
       position: relative;
       padding-left: 1rem;
+      font-weight: normal;
     }
 
     .sentence-list li::before {
       content: "•";
       color: #A4D65E;
-      font-weight: bold;
+      font-weight: normal;
       font-size: 1rem;
       position: absolute;
       left: 0;
     }
 
-    /* Nested / inline examples look clean */
-    strong {
-      color: #1e293b;
-      font-weight: 700;
-    }
-
+    /* No bold anywhere except h2/h3 headings */
     .vocab-block {
       margin: 0.5rem 0 1rem 0;
       display: flex;
@@ -101,7 +97,7 @@
       border-radius: 30px;
       padding: 0.25rem 0.9rem;
       font-size: 0.8rem;
-      font-weight: 500;
+      font-weight: 400;
       color: #1e293b;
       border: 1px solid #e2e8f0;
     }
@@ -160,56 +156,56 @@
   <!-- 1. POINT section -->
   <h2>1. Point — The Significance of...</h2>
   <ul class="sentence-list">
-    <li><strong>The significance of</strong> [character/event] lies in how Priestley uses it to expose ... while simultaneously advocating ...</li>
-    <li><strong>The significance of</strong> [Theme] is central to this scene, as Priestley uses it to deconstruct the idea that...</li>
-    <li><strong>The significance of</strong> [Theme] resides in how it functions as a catalyst for the play's conflict, specifically exposing...</li>
-    <li><strong>The significance of</strong> [Theme] lies in its role in undermining [Character's] belief in [Idea], revealing that...</li>
-    <li><strong>The significance of</strong> [Theme] is that it provides a lens through which the audience can critique the systemic failures of...</li>
-    <li><strong>The significance of</strong> [Theme] is amplified by Priestley's desire to challenge...</li>
-    <li><strong>The significance of</strong> [Theme] can be understood as a direct attack on the selfish ideologies of...</li>
-    <li>(dramatic irony) <strong>The significance of</strong> [Theme] stems from the juxtaposition between [X] and [Y], which Priestley employs to undermine...</li>
+    <li>The significance of [character/event] lies in how Priestley uses it to expose ... while simultaneously advocating ...</li>
+    <li>The significance of [Theme] is central to this scene, as Priestley uses it to deconstruct the idea that...</li>
+    <li>The significance of [Theme] resides in how it functions as a catalyst for the play's conflict, specifically exposing...</li>
+    <li>The significance of [Theme] lies in its role in undermining [Character's] belief in [Idea], revealing that...</li>
+    <li>The significance of [Theme] is that it provides a lens through which the audience can critique the systemic failures of...</li>
+    <li>The significance of [Theme] is amplified by Priestley's desire to challenge...</li>
+    <li>The significance of [Theme] can be understood as a direct attack on the selfish ideologies of...</li>
+    <li>(dramatic irony) The significance of [Theme] stems from the juxtaposition between [X] and [Y], which Priestley employs to undermine...</li>
   </ul>
 
-  <!-- 2. EVIDENCE section (organised with subheadings but no cards) -->
+  <!-- 2. EVIDENCE section -->
   <h2>2. Evidence — Textual Anchors</h2>
   
   <h3>2.1 Event / Key moment</h3>
   <ul class="sentence-list">
-    <li><strong>The moment in which</strong> ... is particularly telling</li>
-    <li><strong>The idea that</strong> ... is emphasised when...</li>
-    <li><strong>The suggestion that</strong> ... becomes evident when...</li>
-    <li><strong>This is foregrounded during the moment in which</strong> ...</li>
-    <li><strong>A pivotal moment occurs when</strong> ...</li>
-    <li><strong>A significant turning point is established when</strong> ...</li>
+    <li>The moment in which ... is particularly telling</li>
+    <li>The idea that ... is emphasised when...</li>
+    <li>The suggestion that ... becomes evident when...</li>
+    <li>This is foregrounded during the moment in which ...</li>
+    <li>A pivotal moment occurs when ...</li>
+    <li>A significant turning point is established when ...</li>
   </ul>
 
   <h3>2.2 Character & reaction</h3>
   <ul class="sentence-list">
-    <li>This is evident in <strong>the way [character] responds when</strong> ...</li>
-    <li>This is reinforced through <strong>[character]'s reaction to</strong> ...</li>
-    <li>Priestley highlights this through <strong>[character]'s decision to</strong> ...</li>
-    <li>This is demonstrated by <strong>[character]'s willingness / refusal to</strong> ...</li>
-    <li>This is encapsulated in <strong>[character]'s treatment of</strong> ...</li>
+    <li>This is evident in the way [character] responds when ...</li>
+    <li>This is reinforced through [character]'s reaction to ...</li>
+    <li>Priestley highlights this through [character]'s decision to ...</li>
+    <li>This is demonstrated by [character]'s willingness / refusal to ...</li>
+    <li>This is encapsulated in [character]'s treatment of ...</li>
   </ul>
 
   <h3>2.3 Relationship / Dialogue</h3>
   <ul class="sentence-list">
-    <li>This is evident in <strong>the interaction between [character] and [character]</strong>, where...</li>
-    <li>Priestley emphasises this through <strong>the contrast in responses when</strong> ...</li>
-    <li>This is reinforced by <strong>the disagreement that arises when</strong> ...</li>
+    <li>This is evident in the interaction between [character] and [character], where...</li>
+    <li>Priestley emphasises this through the contrast in responses when ...</li>
+    <li>This is reinforced by the disagreement that arises when ...</li>
   </ul>
 
   <h3>2.4 Recurring evidence (pattern)</h3>
   <ul class="sentence-list">
-    <li>This is <strong>not an isolated moment, but is reinforced throughout the play when</strong> ...</li>
-    <li><strong>Similar attitudes are evident later when</strong> ...</li>
-    <li><strong>This is echoed in the moment where</strong> ...</li>
+    <li>This is not an isolated moment, but is reinforced throughout the play when ...</li>
+    <li>Similar attitudes are evident later when ...</li>
+    <li>This is echoed in the moment where ...</li>
   </ul>
 
   <h3>2.5 Implicit evidence</h3>
   <ul class="sentence-list">
-    <li>This is implied through <strong>the way the play presents</strong> ...</li>
-    <li>This can be inferred from <strong>the fact that</strong> ...</li>
+    <li>This is implied through the way the play presents ...</li>
+    <li>This can be inferred from the fact that ...</li>
     <li>Priestley subtly reinforces this idea through ...</li>
   </ul>
 
@@ -218,46 +214,46 @@
   
   <h3>3.1 Immediate explanation</h3>
   <ul class="sentence-list">
-    <li><strong>This illustrates that</strong> ...</li>
-    <li><strong>This establishes that</strong> ...</li>
-    <li><strong>This demonstrates how</strong> ...</li>
+    <li>This illustrates that ...</li>
+    <li>This establishes that ...</li>
+    <li>This demonstrates how ...</li>
   </ul>
 
   <h3>3.2 Deeper development & critique</h3>
   <ul class="sentence-list">
-    <li><strong>This suggests that</strong> [character/theme] is not merely..., but rather...</li>
-    <li><strong>This reinforces/develops the idea that</strong> ...</li>
-    <li><strong>This begins to expose a more complex dynamic in which</strong> ...</li>
-    <li><strong>This can be interpreted as a critique of</strong> ...</li>
-    <li><strong>This reveals the consequences of</strong> ...</li>
-    <li>At the same time, <strong>this points towards the necessity of</strong> ...</li>
-    <li><strong>This reinforces Priestley's belief in</strong> ...</li>
-    <li><strong>Priestley presents this as morally indefensible because</strong> ...</li>
-    <li><strong>Priestley leaves little ambiguity in suggesting that</strong> ...</li>
-    <li><strong>Priestley frames this as a more sustainable approach to</strong> ...</li>
+    <li>This suggests that [character/theme] is not merely..., but rather...</li>
+    <li>This reinforces/develops the idea that ...</li>
+    <li>This begins to expose a more complex dynamic in which ...</li>
+    <li>This can be interpreted as a critique of ...</li>
+    <li>This reveals the consequences of ...</li>
+    <li>At the same time, this points towards the necessity of ...</li>
+    <li>This reinforces Priestley's belief in ...</li>
+    <li>Priestley presents this as morally indefensible because ...</li>
+    <li>Priestley leaves little ambiguity in suggesting that ...</li>
+    <li>Priestley frames this as a more sustainable approach to ...</li>
   </ul>
 
-  <!-- 4. LINK section (readers / context / whole play / today) -->
+  <!-- 4. LINK section -->
   <h2>4. Link — Wider Implications</h2>
 
   <h3>4.1 Readers & audience response</h3>
   <ul class="sentence-list">
-    <li>This <strong>positions the audience to critically reassess their assumptions about</strong> ...</li>
-    <li>This ensures that <strong>the audience leaves the play with a clear and unavoidable understanding of</strong> ...</li>
-    <li>The audience is encouraged to <strong>recognise the consequences of</strong> ...</li>
+    <li>This positions the audience to critically reassess their assumptions about ...</li>
+    <li>This ensures that the audience leaves the play with a clear and unavoidable understanding of ...</li>
+    <li>The audience is encouraged to recognise the consequences of ...</li>
     <li>This makes it difficult for the audience to ignore the fact that ...</li>
-    <li>Priestley <strong>directs the audience towards the conclusion that</strong> ...</li>
-    <li>This invites the audience to perceive ... as morally indefensible.</li>
+    <li>Priestley directs the audience towards the conclusion that ...</li>
+    <li>This invites the audience to perceive ... as morally indefensible</li>
     <li>The audience is positioned not merely to observe, but to evaluate and judge...</li>
   </ul>
 
   <h3>4.2 Context (Edwardian & 1945)</h3>
   <ul class="sentence-list">
-    <li>In the context of Edwardian society, <strong>this reflects</strong> ...</li>
+    <li>In the context of Edwardian society, this reflects ...</li>
     <li>This aligns with the social values associated with ...</li>
     <li>This highlights the inequalities embedded within ...</li>
-    <li>Priestley, writing in 1945, <strong>deliberately uses this to challenge</strong> ...</li>
-    <li>This reflects the contrast between <strong>pre-war attitudes and post-war expectations</strong> of...</li>
+    <li>Priestley, writing in 1945, deliberately uses this to challenge ...</li>
+    <li>This reflects the contrast between pre-war attitudes and post-war expectations of...</li>
     <li>This reflects Priestley's broader socialist perspective, which advocates for ...</li>
     <li>This reinforces the idea that social progress depends on ...</li>
     <li>A 1945 audience, aware of the consequences of social division, would be compelled to recognise the urgency of...</li>
@@ -265,27 +261,27 @@
 
   <h3>4.3 Whole play structure & cyclical ending</h3>
   <ul class="sentence-list">
-    <li>Within the wider structure of the play, <strong>this contributes to</strong> ...</li>
-    <li>The cyclical ending reinforces that <strong>society is likely to repeat its mistakes unless it changes</strong>.</li>
-    <li>This anticipates the final twist, which reasserts Priestley's warning.</li>
+    <li>Within the wider structure of the play, this contributes to ...</li>
+    <li>The cyclical ending reinforces that society is likely to repeat its mistakes unless it changes</li>
+    <li>This anticipates the final twist, which reasserts Priestley's warning</li>
     <li>This consistency across the play suggests that ...</li>
-    <li>This ultimately contributes to <strong>Priestley's overarching argument that</strong> ...</li>
-    <li>This reinforces the play's function as a moral critique and a call for change.</li>
+    <li>This ultimately contributes to Priestley's overarching argument that ...</li>
+    <li>This reinforces the play's function as a moral critique and a call for change</li>
   </ul>
 
   <h3>4.4 Relevance to Today</h3>
   <ul class="sentence-list">
-    <li><strong>Diachronic:</strong> Priestley's didactic message transcends its 1912 setting, reminding us that the moral failures of the past...</li>
+    <li>Diachronic: Priestley's didactic message transcends its 1912 setting, reminding us that the moral failures of the past...</li>
     <li>The play functions as a timeless reminder that remains strikingly poignant today, especially when considering...</li>
-    <li>The Inspector's warning acts as a universal critique of human nature that resonates across generations.</li>
-    <li><strong>Echoing:</strong> The Birlings' apathy finds a chilling modern echo in our current societal indifference towards...</li>
+    <li>The Inspector's warning acts as a universal critique of human nature that resonates across generations</li>
+    <li>Echoing: The Birlings' apathy finds a chilling modern echo in our current societal indifference towards...</li>
     <li>The ideological divide between the generations mirrors the rise of contemporary youth-led movements that...</li>
     <li>Priestley's exploration of systemic inequality strikes a deep chord with a 21st-century audience who must still confront...</li>
-    <li><strong>Persistent issues:</strong> Although the legal landscape has evolved since 1945, the underlying prejudices Priestley exposes persist in the form of...</li>
-    <li>Society has yet to fully internalize the lesson of collective responsibility, making the play's final warning feel particularly haunting.</li>
+    <li>Persistent issues: Although the legal landscape has evolved since 1945, the underlying prejudices Priestley exposes persist in the form of...</li>
+    <li>Society has yet to fully internalize the lesson of collective responsibility, making the play's final warning feel particularly haunting</li>
   </ul>
 
-  <!-- 5. High-value vocabulary: feelings, ideology, intensifiers -->
+  <!-- 5. Vocabulary bank - no bold -->
   <h2>5. Key Vocabulary Bank</h2>
   
   <h3>Audience's feelings</h3>
@@ -321,7 +317,7 @@
     <span class="vocab-tag">ideological</span> <span class="vocab-tag">inevitable</span> <span class="vocab-tag">critical</span>
   </div>
 
-  <!-- Simple back link (same style as Spanish page's back button) -->
+  <!-- Back link -->
   <footer>
     <a href="index.html" class="back-link">← Back to Home</a>
     <p style="font-size: 0.7rem; color: #94a3b8; margin-top: 1rem;">An Inspector Calls | AQA | Essay sentence frames & vocabulary</p>
